@@ -50,6 +50,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  min-width: 320px;
 }
 
 a {
@@ -65,6 +66,7 @@ a {
 }
 
 .container {
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0 75px;
   margin-bottom: 50px;
@@ -94,6 +96,7 @@ a {
 /* header */
 
 .header__container {
+  max-width: 1920px;
   display: flex;
   background-color: #FFFFFF;
   border-radius: 0px 0px 32px 32px;
@@ -111,10 +114,6 @@ a {
 .nav__list {
   display: flex;
   align-items: center;
-}
-
-.nav__item:last-child {
-  margin-right: 260px;
 }
 
 .nav__item {
@@ -387,6 +386,11 @@ a {
 
 /* working */
 
+.working-info__img {
+  background-size: cover;
+  width: 100%;
+}
+
 .working__title {
   margin-bottom: 50px;
 }
@@ -444,9 +448,10 @@ a {
 
 .working-info__descr {
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
-  width: calc((100% - 142px) / 2);
-  margin-right: 142px;
+  width: calc((100% - 30px) / 2);
+  margin-right: 30px;
   justify-content: space-between;
 }
 
@@ -456,6 +461,7 @@ a {
   font-weight: 400;
   line-height: 32px;
   margin-bottom: 18px;
+  width: 87%;
 }
 
 .working-info__btn {
@@ -697,7 +703,7 @@ a {
   font-weight: 400;
   line-height: 32px;
   color: #CACACA;
-  width: 363px;
+  max-width: 363px;
 }
 
 .footer-block__btn {
@@ -736,7 +742,6 @@ a {
   border-radius: 16px;
   margin-bottom: 25px;
   padding: 14px 24px;
-  width: 570px;
   height: 60px;
   outline: none;
   color: #CACACA;
@@ -767,7 +772,6 @@ a {
   background-color: #414141;
   border: none;
   border-radius: 16px;
-  width: 570px;
   height: 150px;
   padding: 14px 24px;
   margin-bottom: 32px;

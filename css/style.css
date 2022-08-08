@@ -72,7 +72,12 @@ a {
   margin-bottom: 50px;
 }
 
-
+.btn-reset {
+  display: none;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
 
 .btn {
   padding: 0;
@@ -268,6 +273,22 @@ a {
 
 /* about */
 
+.about-image__svg-1 {
+  position: absolute;
+  background-image: url("../img/about-1.svg");
+  background-repeat: no-repeat;
+  background-size: 22%;
+  background-position: 8.3% 48%;
+}
+
+.about-image__svg-2 {
+  position: absolute;
+  background-image: url("../img/about-2.svg");
+  background-repeat: no-repeat;
+  background-size: 22%;
+  background-position: 8.3% 48%;
+}
+
 .about-img {
   background-image: url("../img/about-image.jpg");
 }
@@ -296,7 +317,7 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 32px;
-  width: 60%;
+  width: 59%;
   color: #FFFFFF;
 }
 
@@ -347,16 +368,22 @@ a {
   margin-bottom: 50px;
 }
 
+.about-info__block {
+  flex-basis: 68%;
+}
+
 .about-info__list {
   display: flex;
   flex-direction: column;
 }
 
 .about-info__item {
+  position: relative;
   display: flex;
   padding: 64px 60px;
   border: 1px solid #CACACA;
   border-radius: 32px;
+  justify-content: flex-end;
 }
 
 .about-info__item:first-child {
@@ -386,9 +413,10 @@ a {
 
 /* working */
 
-.working-info__img {
+.working-image__img {
   background-size: cover;
   width: 100%;
+  height: auto;
 }
 
 .working__title {
@@ -403,7 +431,7 @@ a {
   display: flex;
 }
 
-.working-btns__item {
+.working-btns__item:not(:last-child) {
   margin-right: 86px;
 }
 
@@ -436,7 +464,11 @@ a {
   margin-bottom: 8px;
 }
 
-.working-info__image {
+.working-image {
+  display: flex;
+}
+
+.working-image__item {
   font-size: 0;
   display: flex;
 }
@@ -617,9 +649,11 @@ a {
 .footer-links {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
-  justify-content: space-between;
-  margin-right: 118px;
+  flex-basis: 370px;
+}
+
+.footer-links__item:last-child {
+  margin-bottom: 95px;
 }
 
 .footer-link__logo {
@@ -681,7 +715,6 @@ a {
 .footer-block {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
 }
 
 .footer-block__form {

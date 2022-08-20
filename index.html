@@ -7,6 +7,8 @@
   <title>Евклид - проектные системы</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./libs/accordion.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/media.css">
 </head>
@@ -20,6 +22,7 @@
       </button>
       <a class="logo">
         <picture>
+          <source srcset="./img/logo-low.svg" media="(max-width: 320px)">
           <source srcset="./img/logo-medium.svg" media="(max-width: 1024px)">
           <img src="./img/logo.svg" alt="Логотип">
         </picture>
@@ -27,7 +30,7 @@
       <nav class="nav">
         <ul class="nav__list list-reset">
           <li class="nav__item">
-            <a href="#" class="nav__link">О нас</a>
+            <a href="#about" class="nav__link">О нас</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Проекты</a>
@@ -54,7 +57,45 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="hero__slider hero-1">
+        <div class="swiper">
+            <div class="hero__text">
+              <h1 class="hero__title">
+                Проектные решения любой сложности
+              </h1>
+              <p class="hero__descr">
+                Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
+              </p>
+              <button class="btn hero__btn">Заказать расчёт</button>
+            </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/hero-small-low-1.jpg" media="(max-width: 320px)">
+                <source srcset="./img/hero-low-1.jpg" media="(max-width: 768px)">
+                <source srcset="./img/hero-medium-1.jpg" media="(max-width: 1024px)">
+                <img src="./img/hero-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/hero-small-low-2.jpg" media="(max-width: 320px)">
+                <source srcset="./img/hero-low-2.jpg" media="(max-width: 768px)">
+                <source srcset="./img/hero-medium-2.jpg" media="(max-width: 1024px)">
+                <img src="./img/hero-2.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./img/hero-small-low-3.jpg" media="(max-width: 320px)">
+                <source srcset="./img/hero-low-3.jpg" media="(max-width: 768px)">
+                <source srcset="./img/hero-medium-3.jpg" media="(max-width: 1024px)">
+                <img src="./img/hero-3.jpg" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- <div class="hero__slider hero-1">
           <div class="hero__text">
             <h1 class="hero__title">
               Проектные решения любой сложности
@@ -64,29 +105,11 @@
             </p>
             <button class="btn hero__btn">Заказать расчёт</button>
           </div>
-          <div class="hero-bullets">
-            <ul class="hero-bullets__list list-reset">
-              <li class="hero-bullets__item">
-                <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="7.5" cy="7.5" r="7.5"/>
-                </svg>
-              </li>
-              <li class="hero-bullets__item">
-                <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="7.5" cy="7.5" r="7.5"/>
-                </svg>
-              </li>
-              <li class="hero-bullets__item">
-                <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="7.5" cy="7.5" r="7.5"/>
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+        </div> -->
       </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <div class="container about__container">
         <h2 class="title about__title">
           О нас
@@ -95,7 +118,13 @@
           Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
         </p>
         <div class="about__content">
-          <div class="about-image about-img">
+          <div class="about-image">
+            <picture class="about-image__item">
+              <source srcset="./img/about-image-small-low.jpg" media="(max-width: 320px)">
+              <source srcset="./img/about-image-low.jpg" media="(max-width: 768px)">
+              <source srcset="./img/about-image-medium.jpg" media="(max-width: 1024px)">
+              <img src="./img/about-image.jpg" alt="" class="about-image__img">
+            </picture>
             <div class="about-image__descr">
               <p class="about-image__title">
                 Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов
@@ -133,41 +162,68 @@
     <section class="working">
       <div class="container working__container">
         <h2 class="title working__title">
-          Как мы работаем
+          Как мы работаем
         </h2>
         <div class="working-btns">
           <ul class="working-btns__list list-reset">
             <li class="working-btns__item">
-              <a href="#" class="working-btns__link">
+              <button class="working-btns__link working-btns__link--active" data-path="one">
                 1 шаг
-              </a>
+              </button>
             </li>
             <li class="working-btns__item">
-              <a href="#" class="working-btns__link">
+              <button class="working-btns__link" data-path="two">
                 2 шаг
-              </a>
+              </button>
             </li>
             <li class="working-btns__item">
-              <a href="#" class="working-btns__link">
+              <button class="working-btns__link" data-path="three">
                 3 шаг
-              </a>
+              </button>
             </li>
             <li class="working-btns__item">
-              <a href="#" class="working-btns__link">
+              <button class="working-btns__link" data-path="four">
                 4 шаг
-              </a>
+              </button>
             </li>
           </ul>
         </div>
         <div class="working-info">
-          <div class="working-info__descr">
-            <h3 class="working-info__title">
-              Проводим консультацию
-            </h3>
-            <p class="working-info__para">
-              Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями.
-              А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
-            </p>
+          <div class="working-block">
+            <div class="working-info__descr working-info__descr--active" data-target="one">
+              <h3 class="working-info__title">
+                Проводим консультацию
+              </h3>
+              <p class="working-info__para">
+                Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями.
+                А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+              </p>
+            </div>
+            <div class="working-info__descr" data-target="two">
+              <h3 class="working-info__title">
+                Составляем смету
+              </h3>
+              <p class="working-info__para">
+                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+              </p>
+            </div>
+            <div class="working-info__descr" data-target="three">
+              <h3 class="working-info__title">
+                Привлекаем подрядчиков
+              </h3>
+              <p class="working-info__para">
+                Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+              </p>
+            </div>
+            <div class="working-info__descr" data-target="four">
+              <h3 class="working-info__title">
+                Инспектируем все этапы работ
+              </h3>
+              <p class="working-info__para">
+                Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит
+                о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+              </p>
+            </div>
             <div class="working-info__btns">
               <button class="btn working-info__btn working-info__btn--fill">
                 Подробнее
@@ -177,11 +233,36 @@
               </button>
             </div>
           </div>
-          <div class="working-image">
+          <div class="working-image working-image--active" data-img="one">
             <picture class="working-image__item">
-              <source srcset="./img/working-slider-low.jpg" media="(max-width: 768px)">
-              <source srcset="./img/working-slider-medium.jpg" media="(max-width: 1024px)">
-              <img src="./img/working-slider.jpg" alt="" class="working-image__img">
+              <source srcset="./img/working-slider-minlow-1.jpg" media="(max-width: 320px)">
+              <source srcset="./img/working-slider-low-1.jpg" media="(max-width: 768px)">
+              <source srcset="./img/working-slider-medium-1.jpg" media="(max-width: 1024px)">
+              <img src="./img/working-slider-1.jpg" alt="" class="working-image__img">
+            </picture>
+          </div>
+          <div class="working-image" data-img="two">
+            <picture class="working-image__item">
+              <source srcset="./img/working-slider-minlow-2.jpg" media="(max-width: 320px)">
+              <source srcset="./img/working-slider-low-2.jpg" media="(max-width: 768px)">
+              <source srcset="./img/working-slider-medium-2.jpg" media="(max-width: 1024px)">
+              <img src="./img/working-slider-2.jpg" alt="" class="working-image__img">
+            </picture>
+          </div>
+          <div class="working-image" data-img="three">
+            <picture class="working-image__item">
+              <source srcset="./img/working-slider-minlow-3.jpg" media="(max-width: 320px)">
+              <source srcset="./img/working-slider-low-3.jpg" media="(max-width: 768px)">
+              <source srcset="./img/working-slider-medium-3.jpg" media="(max-width: 1024px)">
+              <img src="./img/working-slider-3.jpg" alt="" class="working-image__img">
+            </picture>
+          </div>
+          <div class="working-image" data-img="four">
+            <picture class="working-image__item">
+              <source srcset="./img/working-slider-minlow-4.jpg" media="(max-width: 320px)">
+              <source srcset="./img/working-slider-low-4.jpg" media="(max-width: 768px)">
+              <source srcset="./img/working-slider-medium-4.jpg" media="(max-width: 1024px)">
+              <img src="./img/working-slider-4.jpg" alt="" class="working-image__img">
             </picture>
           </div>
         </div>
@@ -194,7 +275,7 @@
         </h2>
         <div class="question-list">
           <ul class="question-list__list list-reset">
-            <li class="question-list__item">
+            <li class="question-list__item accordion">
               <a href="#" class="question-list__link">
                 Из&nbsp;чего формируется конечная стоимость проекта?
               </a>
@@ -203,7 +284,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"/>
               </svg>
             </li>
-            <li class="question-list__item">
+            <li class="question-list__item accordion">
               <a href="#" class="question-list__link">
                 У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/ реализовать?
               </a>
@@ -212,7 +293,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"/>
               </svg>
             </li>
-            <li class="question-list__item">
+            <li class="question-list__item accordion">
               <a href="#" class="question-list__link">
                 Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
               </a>
@@ -221,7 +302,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"/>
               </svg>
             </li>
-            <li class="question-list__item">
+            <li class="question-list__item accordion">
               <a href="#" class="question-list__link">
                 Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp;/ согласование с&nbsp;подрядчиком&nbsp;/ организацией?
               </a>
@@ -230,7 +311,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"/>
               </svg>
             </li>
-            <li class="question-list__item">
+            <li class="question-list__item accordion">
               <a href="#" class="question-list__link">
                 Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?
               </a>
@@ -247,7 +328,10 @@
       <div class="container footer__container">
         <div class="footer-links">
           <a class="footer-link" href="#">
-            <img class="footer-link__logo" src="./img/footer-logo.svg" alt="Логотип">
+            <picture class="footer-link-list">
+              <source srcset="./img/footer-logo-low.svg" media="(max-width: 320px)">
+              <img class="footer-link__item" src="./img/footer-logo.svg" alt="Логотип">
+            </picture>
           </a>
           <ul class="footer-links__list list-reset">
             <li class="footer-links__item">
@@ -335,5 +419,8 @@
       </div>
     </footer>
   </main>
+  <script src="./libs/accordion.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

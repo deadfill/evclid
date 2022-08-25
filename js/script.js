@@ -1,3 +1,17 @@
+//swiper
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+
+});
+
 //burger
 let burger = document.querySelector('.button-burger');
 let menu = document.querySelector('.nav__list');
@@ -20,6 +34,24 @@ menuLinks.forEach(function (el) {
     document.body.classList.remove('stop-scroll');
   })
 })
+
+// search
+
+let searchBtn = document.querySelector('.header__search');
+let searchForm = document.querySelector('.header-form');
+let searchClose = document.querySelector('.header-form__close')
+
+searchBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  searchForm.classList.toggle('header-form--active');
+})
+
+searchClose.addEventListener('click', function (e) {
+  e.preventDefault();
+    searchForm.classList.remove('header-form--active');
+
+})
+
 
 //tabs
 
@@ -46,14 +78,16 @@ tabsBtns.forEach(function (tabsBtn) {
   });
 });
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  loop: true,
-  spaceBetween: 30,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
-  },
+//accordion
 
-});
+let accBtn = document.querySelectorAll('.question-list__link');
+let accSvg = document.querySelectorAll('.question-list__svg')
+
+accBtn.forEach(function (item) {
+  item.addEventListener('click', function () {
+    item.classList.toggle('question-list__link--active')
+    item.nextElementSibling.classList.toggle('question-list__content--active')
+    item.firstElementChild.classList.toggle('question-list__svg--active')
+  })
+})
+

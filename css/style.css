@@ -101,6 +101,7 @@ a {
 /* header */
 
 .header__container {
+  position: relative;
   max-width: 1920px;
   display: flex;
   background-color: #FFFFFF;
@@ -162,6 +163,139 @@ a {
 .nav__link:active::after {
   opacity: 1;
   background-color: #E1670E;
+}
+
+.header-form {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  height: 60px;
+  min-width: 539px;
+  padding: 16px 13px 16px 32px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  flex-shrink: 1;
+  transform: translateY(-120%);
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 10000;
+}
+
+.header-form__input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #CACACA;
+  margin-right: 14px;
+  outline: none;
+}
+
+.header-form__input::placeholder {
+  color: #CACACA;
+}
+
+.header-form--active {
+  visibility: visible;
+  transform: none;
+}
+
+.header__search {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.header-form__search {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.header-form__search svg path, .header-form__search svg rect{
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.header-form__search svg path {
+  stroke: #000000;
+}
+
+.header-form__search svg rect {
+  fill: #000000;
+}
+
+.header-form__search:focus svg {
+  outline: 2px solid #FF9900;
+  outline-offset: 4px;
+}
+
+.header-form__search:focus svg path {
+  stroke: #000000;
+}
+
+.header-form__search:focus svg rect {
+  fill: #000000;
+}
+
+.header-form__search:hover svg path {
+  stroke: #FF9900;
+}
+
+.header-form__search:hover svg rect {
+  fill: #FF9900;
+}
+
+.header-form__search:active svg path {
+  stroke: #FF9900;
+}
+
+.header-form__search:active svg rect {
+  fill: #FF9900;
+}
+
+.header-form__close {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.header-form__close svg rect, .header-form__close svg circle {
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.header-form__close svg rect {
+  fill: #CACACA;
+}
+
+.header-form__close svg circle {
+  stroke: #CACACA;
+}
+
+.header-form__close:focus svg {
+  outline: 2px solid #FF9900;
+  outline-offset: 4px;
+}
+
+
+.header-form__close:hover svg rect {
+  fill: #FF9900;
+}
+
+.header-form__close:hover svg circle {
+  stroke: #FF9900;
+}
+
+.header-form__close:active svg rect {
+  fill: #000000;
+}
+
+.header-form__close:active svg circle {
+  stroke: #000000;
+}
+
+.header-form__close:active svg {
+  outline: none;
 }
 
 .header__search svg {
@@ -611,21 +745,66 @@ a {
   margin-bottom: 32px;
 }
 
+
 .question-list__link {
+  display: flex;
+  width: 100%;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-}
-
-.question-list__item {
-  display: flex;
+  background-color: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
   justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  text-align: left;
   padding-top: 29px;
   padding-bottom: 30px;
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
-  align-items: center;
   transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.question-list__para {
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.question-list__link:focus {
+  color: #FF9900;
+  border-color: #FF9900;
+}
+
+.question-list__link:hover {
+  color: #FF9900;
+  border-color: #FF9900;
+}
+
+.question-list__link--active {
+  color: #000000;
+  border-color: #CACACA;
+}
+
+.question-list__content {
+  display: none;
+  visibility: hidden;
+  color: #000;
+  transform: translateY(-260px);
+  transition: 1s;
+}
+
+.question-list__content--active {
+  display: block;
+  visibility: visible;
+  transform: none;
+
+}
+
+.question-list__link svg {
+  flex-shrink: 0;
 }
 
 .question-list__item svg {
@@ -637,11 +816,6 @@ a {
   fill: black;
 }
 
-.question-list__item:focus {
-  color: #FF9900;
-  border-top: 1px solid #FF9900;
-  border-bottom: 1px solid #FF9900;
-}
 
 .question-list__item:focus svg {
   fill: #FF9900;
@@ -651,13 +825,8 @@ a {
   fill: #FFFFFF;
 }
 
-.question-list__item:hover {
-  color: #FF9900;
-  border-top: 1px solid #FF9900;
-  border-bottom: 1px solid #FF9900;
-}
 
-.question-list__item:hover svg {
+.question-list__link:hover svg {
   fill: #FF9900;
 }
 
@@ -665,14 +834,8 @@ a {
   fill: #FFFFFF;
 }
 
-.question-list__item:active {
-  color: #000000;
-  border-top: 1px solid #CACACA;
-  border-bottom: 1px solid #CACACA;
-}
 
-.question-list__item:active svg {
-  fill: #CACACA;
+.question-list__svg--active {
   transform: rotate(-45deg);
 }
 

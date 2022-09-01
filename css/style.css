@@ -686,6 +686,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  color: #000000;
   padding: 20px 38px;
   border: 1px solid #000000;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;

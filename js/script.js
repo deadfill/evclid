@@ -9,7 +9,9 @@ const swiper = new Swiper('.swiper', {
     type: 'bullets',
     clickable: true
   },
-
+  a11y: {
+    paginationBulletMessage: 'Слайдер №{{index}}'
+  },
 });
 
 //burger
@@ -24,6 +26,12 @@ burger.addEventListener('click',
     burger.classList.toggle('burger--active');
     menu.classList.toggle('nav__list--active');
     document.body.classList.toggle('stop-scroll');
+    console.log(this.classList)
+    if (this.classList.contains('burger--active')) {
+      this.ariaLabel = 'Закрыть меню'
+    } else {
+      this.ariaLabel = 'Меню'
+    }
   }
 )
 
@@ -81,13 +89,19 @@ tabsBtns.forEach(function (tabsBtn) {
 //accordion
 
 let accBtn = document.querySelectorAll('.question-list__link');
-let accSvg = document.querySelectorAll('.question-list__svg')
+let accSvg = document.querySelectorAll('.question-list__svg');
 
 accBtn.forEach(function (item) {
+  item.parentNode.ariaLabel = 'Развернуть';
   item.addEventListener('click', function () {
     item.classList.toggle('question-list__link--active')
     item.nextElementSibling.classList.toggle('question-list__content--active')
     item.firstElementChild.classList.toggle('question-list__svg--active')
+    if (item.classList.contains('question-list__link--active')) {
+      item.parentNode.ariaLabel = 'Свернуть'
+    }else {
+      item.parentNode.ariaLabel = 'Развернуть'
+    }
   })
 })
 
